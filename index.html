@@ -5,61 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal Haircuts</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <header>
     <h1>Royal Haircuts</h1>
-    <p>Where Kings Get Their Cuts</p>
+    <p class="tagline">Where Royals are made</p>
   </header>
 
-  <section>
-    <div class="services">
-      <div class="card">
-        <i data-lucide="scissors" class="w-8 h-8 mb-2"></i>
-        <h2>Haircuts</h2>
-        <p>Fade, Taper, Afro, Line-up, and more from professional barbers.</p>
+  <main class="container">
+    <section aria-label="Services">
+      <div class="services">
+        <a href="haircuts.html" class="card" tabindex="0" aria-label="Haircuts service">
+          <i data-lucide="scissors" class="icon-gold"></i>
+          <h2>Haircuts</h2>
+          <p>Fade, Taper, Afro, Line-up, and more from professional barbers.</p>
+        </a>
+        <a href="shaves.html" class="card" tabindex="0" aria-label="Shaves and grooming service">
+          <i data-lucide="scissors" class="icon-gold"></i>
+          <h2>Shaves & Grooming</h2>
+          <p>Hot towel shaves, beard trims, and facial grooming services.</p>
+        </a>
+        <a href="vip.html" class="card" tabindex="0" aria-label="VIP grooming service">
+          <i data-lucide="crown" class="icon-gold"></i>
+          <h2>VIP Service</h2>
+          <p>Private room grooming for those who want the royal treatment.</p>
+        </a>
       </div>
-      <div class="card">
-        <i data-lucide="scissors" class="w-8 h-8 mb-2"></i>
-        <h2>Shaves & Grooming</h2>
-        <p>Hot towel shaves, beard trims, and facial grooming services.</p>
-      </div>
-      <div class="card">
-        <i data-lucide="crown" class="w-8 h-8 mb-2"></i>
-        <h2>VIP Service</h2>
-        <p>Private room grooming for those who want the royal treatment.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="hours">
-    <h2>Opening Hours</h2>
-    <ul>
-      <li>Mon - Fri: 9:00 AM - 8:00 PM</li>
-      <li>Saturday: 8:00 AM - 10:00 PM</li>
-      <li>Sunday: 10:00 AM - 6:00 PM</li>
-    </ul>
-  </section>
+    <section class="hours" aria-label="Opening Hours">
+      <h2>Opening Hours</h2>
+      <ul>
+        <li>Mon - Fri: 9:00 AM - 8:00 PM</li>
+        <li>Saturday: 8:00 AM - 10:00 PM</li>
+        <li>Sunday: 10:00 AM - 6:00 PM</li>
+      </ul>
+    </section>
 
-  <section class="form-section">
-    <h2>Book an Appointment</h2>
-    <form id="appointment-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="datetime-local" required />
-      <button type="submit">
-        <i data-lucide="calendar"></i> Book Now
-      </button>
-    </form>
-  </section>
+    <section class="form-section" aria-label="Book Appointment">
+      <h2>Book an Appointment</h2>
+      <form id="appointment-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="datetime-local" required />
+        <button type="submit" class="btn-gold">
+          <i data-lucide="calendar"></i> Book Now
+        </button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>Contact us: <i data-lucide="phone-call"></i> +233 20 000 0000</p>
+    <p>Contact us: <i data-lucide="phone-call" class="icon-gold"></i> +233 20 000 0000</p>
     <p>&copy; 2025 Royal Haircuts. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Initialize lucide icons
+    lucide.replace();
+  </script>
 </body>
 </html>
